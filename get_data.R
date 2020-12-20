@@ -11,8 +11,8 @@
 args <- commandArgs(trailingOnly = TRUE)
 
 ## read in utility functions
-## args[1] <- <path>/<to>/scripts/r
-## args[2] <- <path>/<to>/data
+args[1] <- "https://github.com/Rose-9/Reproduce_Skinner"
+args[2] <- "Volumes/WORK_20GB/U of T/4^th/Upper/STA304/Final Assignment/Reproduce_Skinner/DataFile"
 source(file.path(args[1], '/utils.R'))
 
 ## directories
@@ -97,14 +97,14 @@ unzip(file.path(gdir, 'LND.zip'), exdir = gdir)
 ## -----------------
 
 ipeds_dir <- idir
-source(file.path(args[1], 'download_ipeds.R'))
+source(file.path(args[1], "download_ipeds.R"))
 
 ## -----------------
 ## ./sheeo
 ## -----------------
 
-file <- 'State_by_State_Wave_Charts_FY15_0.xlsx'
-url <- 'http://www.sheeo.org/sites/default/files/' %+% file
+file <- 'State_by_State_Wave_Charts_FY15.xlsx'
+url <- 'https://sheeo.org/state_by_state_wave_charts_fy15/' 
 check_get(file, sdir, url, mode = 'wb')
 
 ## -----------------------------------------------------------------------------

@@ -5,8 +5,9 @@ date: "20/12/2020"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r}
+#read in the data
+county<- re
 ```
 
 ## R Markdown
